@@ -121,6 +121,7 @@ section{
 
 .row .col img{
   width: 80%;
+  
 }
 
 .row .col{
@@ -253,6 +254,24 @@ p{
   text-decoration: none;
   font-weight: bold;
   
+}
+
+#events .col img {
+  width: 100%; /* Make both images take full width of their container */
+  height: 300px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Crop images to fit within the height without stretching */
+  border-radius: 10px; /* Optional: Add smooth corners */
+}
+
+#events .row {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust spacing between columns */
+}
+
+#events .col {
+  flex: 1;
+  text-align: center;
 }
 
 
