@@ -71,7 +71,10 @@ a{
 ul{
   list-style: none;
 }
-
+a{
+  /* text-decoration: none; */
+  color: whitesmoke;
+}
 .nav-links{
   display: flex;
   align-items: center;
@@ -81,7 +84,7 @@ ul{
   margin: 0 30px;
 }
 
-.active{
+.nav-links .active a {
   color: #fc036b;
   text-decoration: underline;
   font-weight: bold;
@@ -125,7 +128,7 @@ section{
   flex-direction: column;
   align-items: center;
 }
-.events .row{
+#events .row{
   margin-top: 50px;
 }
 h4{
@@ -138,10 +141,10 @@ p{
   color: #333b61;
   padding: 0px 70px;
 }
-.events .row .col .ctn{
+#events .row .col .ctn{
   margin-top: 30px;
 }
-.Explore{
+#Explore{
   width: 100%;
   height: 100vh;
   background-image: url(./img/bg2.png);
@@ -162,7 +165,7 @@ p{
   flex-direction: column;
 
 }
-.Explore .line{
+#Explore .line{
   margin-bottom: 50px;
 }
 .explore-content h1{
@@ -177,15 +180,15 @@ p{
 .explore-content .ctn{
   margin-top: 40px;
 }
-.tours{
+#tours{
   display: flex;
 }
 
-.tours .row.col{
+#tours .row.col{
   width: 50%;
 }
 
-.tours .image-gallery{
+#tours .image-gallery{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -222,7 +225,7 @@ p{
   margin-left: -100px;
 }
 
-.footer{
+#footer{
   width: 100%;
   min-height: 100px;
   padding: 20px 80px;
@@ -230,11 +233,29 @@ p{
   background: #3a436e;
   text-align: center;
 }
-.footer p{
+#footer p{
   color: whitesmoke;
   margin: 20px auto;
   padding: 20px auto;
 }
+
+/* .nav-links .ctn a {
+  background-color: whitesmoke;
+  color:#fc036b;
+  padding: 8px 15px;
+  border-radius: 30px;
+  transition: 0.3s;
+} */
+
+.nav-links .ctn:hover a {
+  
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+
 /* responsive */
 @media only screen and (max-width:850px) {
   .menu-btn{
@@ -281,17 +302,17 @@ p{
     width: 100%;
   }
 
-  .Explore .line{
+  #Explore .line{
     margin-left: -1px;
   }
-  .tours .line{
+  #tours .line{
     margin-left: -10px;
   }
-  .tours.col{
+  #tours.col{
     width: 100%;
   }
 
-  .tours .ctn{
+  #tours .ctn{
     margin-left: -7px;
   }
 
@@ -302,7 +323,7 @@ p{
   .image-gallery img{
     width: 90%;
   }
-  .footer{
+  #footer{
     padding: 10px;
   }
 }

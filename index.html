@@ -10,12 +10,13 @@
     <nav class="navbar">
       <h1 class="logo">ADVENTURE</h1>
       <ul class="nav-links">
-        <li class="active"><a href="#"></a>Home</li>
-        <li><a href="#"></a>Tours</li>
-        <li><a href="#"></a>Explorer</li>
-        <li><a href="#"></a>About</li>
-        <li class="ctn"><a href="#"></a>Contact</li>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#Explore">Explore</a></li>
+        <li><a href="#tours">Tour</a></li>
+        <li class="ctn"><a href="#footer">Contact</a></li>
       </ul>
+      
       <img src="./img/menu-btn.png" alt="" class="menu-btn" />
     </nav>
     <header>
@@ -27,7 +28,7 @@
       </div>
     </header>
 
-    <section class="events">
+    <section id="events">
       <div class="title">
         <h1>Upcoming events</h1>
         <div class="line"></div>
@@ -37,7 +38,10 @@
           <img src="./img/img1.png" alt="" />
           <h4>Everest Camp Treak</h4>
           <p>
-            Embark on an exhilarating journey to the Everest Base Camp! Experience breathtaking views, immerse yourself in the rich Sherpa culture, and challenge yourself with this once-in-a-lifetime trekking adventure.
+            Embark on an exhilarating journey to the Everest Base Camp!
+            Experience breathtaking views, immerse yourself in the rich Sherpa
+            culture, and challenge yourself with this once-in-a-lifetime
+            trekking adventure.
           </p>
           <a href="#" class="ctn">Learn More</a>
         </div>
@@ -46,50 +50,64 @@
           <img src="./img/img2.png" alt="" />
           <h4>Walking Holidays</h4>
           <p>
-            Explore scenic landscapes on foot and reconnect with nature! Our walking holidays offer peaceful trails, stunning vistas, and the perfect balance of adventure and relaxation.
+            Explore scenic landscapes on foot and reconnect with nature! Our
+            walking holidays offer peaceful trails, stunning vistas, and the
+            perfect balance of adventure and relaxation.
           </p>
           <a href="#" class="ctn">Learn More</a>
         </div>
       </div>
     </section>
 
-    <section class="Explore">
+    <section id="Explore">
       <div class="explore-content">
         <h1>EXPLORE THE WORLD</h1>
         <div class="line"></div>
         <p>
-          Discover breathtaking landscapes, vibrant cultures, and unforgettable experiences. Whether it's the towering mountains, serene beaches, or bustling cities, adventure awaits at every corner. Start your journey today!
+          Discover breathtaking landscapes, vibrant cultures, and unforgettable
+          experiences. Whether it's the towering mountains, serene beaches, or
+          bustling cities, adventure awaits at every corner. Start your journey
+          today!
         </p>
         <a href="" class="ctn">Learn More</a>
       </div>
     </section>
-    <section class="tours">
+    <section id="tours">
       <div class="row">
         <div class="col content-col">
-          <h1>UPCOMING TOURS AND <br>DESTINATION</h1>
+          <h1>UPCOMING TOURS AND <br />DESTINATION</h1>
           <div class="line"></div>
           <p>
-            Get ready for unforgettable journeys to some of the most stunning destinations around the globe. From breathtaking mountain treks to serene beach getaways, our upcoming tours are designed to create lasting memories and exciting adventures.
+            Get ready for unforgettable journeys to some of the most stunning
+            destinations around the globe. From breathtaking mountain treks to
+            serene beach getaways, our upcoming tours are designed to create
+            lasting memories and exciting adventures.
           </p>
           <a href="#" class="ctn">Learn More</a>
         </div>
         <div class="col image-col">
           <div class="image-gallery">
-            <img src="./img/img3.png" alt="">
-            <img src="./img/img4.png" alt="">
-            <img src="./img/img5.png" alt="">
-            <img src="./img/img6.png" alt="">
+            <img src="./img/img3.png" alt="" />
+            <img src="./img/img4.png" alt="" />
+            <img src="./img/img5.png" alt="" />
+            <img src="./img/img6.png" alt="" />
           </div>
         </div>
       </div>
     </section>
-    <section class="footer">
+    <section id="footer">
       <p>
-        Thank you for visiting! Stay connected and explore more exciting adventures with us. Feel free to reach out for collaborations, inquiries, or just to say hello.
+        Thank you for visiting! Stay connected and explore more exciting
+        adventures with us. Feel free to reach out for collaborations,
+        inquiries, or just to say hello.
+      </p>
+      <p>
+        Contact me using the mail for any collaborations, mail id :
+        "kaviyadhanraj1911@gmail.com"
       </p>
       <p>© 2025 Kaviya Dhanraj. All rights reserved.</p>
     </section>
-    
+
     <script>
       const menuBtn = document.querySelector(".menu-btn");
       const navLinks = document.querySelector(".nav-links");
@@ -97,6 +115,19 @@
       menuBtn.addEventListener("click", () => {
         navLinks.classList.toggle("mobile-menu");
       });
+
+      document.querySelectorAll(".nav-links li").forEach((item) => {
+  item.addEventListener("mouseover", function () {
+    document.querySelector(".nav-links .active")?.classList.remove("active");
+    this.classList.add("active");
+  });
+
+  item.addEventListener("mouseleave", function () {
+    this.classList.remove("active");
+    document.querySelector(".nav-links li:first-child").classList.add("active"); // Home remains active when not hovered
+  });
+});
+
     </script>
   </body>
 </html>
